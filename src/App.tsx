@@ -1,7 +1,14 @@
 import React from "react";
+import NavBar from "./NavBar";
+import HeroSection from "./HeroSection";
 
 const App = () => {
-  return <div className="text-2xl font-bold bg-yellow-400">App</div>;
+  return (
+    <>
+      <NavBar />
+      <HeroSection />
+    </>
+  );
 };
 
 export default App;
