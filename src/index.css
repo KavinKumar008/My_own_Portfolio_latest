@@ -4,7 +4,7 @@
 
 
 *{
-    margin: 0;
+    /* margin: 0; */
     /* padding: 0; */
     box-sizing: border-box;
     font-family: "Josefin Sans", sans-serif;
@@ -12,4 +12,8 @@
 
 body{
     background-color: black;
+}
+
+.btn-primary{
+   @apply text-white cursor-pointer border border-white p-3 rounded-md text-[20px] font-bold
 }
