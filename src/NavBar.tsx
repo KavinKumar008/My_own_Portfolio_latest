@@ -1,29 +1,36 @@
-import React from "react";
-import scroll from "./assets/scrollimgsamsung3.jpeg";
+// import myPhoto from "./assets/myphoto(3)-2025.png";
 
 const NavBar = () => {
   return (
-    <main className="flex justify-between items-center p-3">
-      <div className="w-[20%]">
+    <main className="p-3">
+      {/* <div className="w-[20%]">
         <img
-          src={scroll}
+          src={myPhoto}
           alt=""
-          className="rounded-full w-[80px] h-[80px] cursor-pointer"
+          className="rounded-full w-[100px] h-[100px] cursor-pointer"
         />
-      </div>
-      <div className="w-[80%] flex justify-around">
-        <h4 className="text-white border border-white p-3 rounded-xl w-[150px] text-center text-lg font-bold cursor-pointer hover:bg-blue-300 hover:text-black">
-          Name
-        </h4>
-        <h4 className="text-white border border-white p-3 rounded-xl w-[150px] text-center text-lg font-bold cursor-pointer hover:bg-blue-300 hover:text-black">
-          Projects
-        </h4>
-        <h4 className="text-white border border-white p-3 rounded-xl w-[150px] text-center text-lg font-bold cursor-pointer hover:bg-blue-300 hover:text-black">
-          Skills
-        </h4>
-        <h4 className="text-white border border-white p-3 rounded-xl w-[150px] text-center text-lg font-bold cursor-pointer hover:bg-blue-300 hover:text-black">
-          Contact
-        </h4>
+      </div> */}
+      <div className="flex justify-around">
+        <a href="#HeroSection">
+          <h4 className="text-white border border-white p-3 rounded-xl w-[150px] text-center text-lg font-bold cursor-pointer hover:bg-[#9d4edd] hover:text-black hover:transition hover:duration-300 hover:ease-in-out">
+            Name
+          </h4>
+        </a>
+        <a href="#ProjectsSection">
+          <h4 className="text-white border border-white p-3 rounded-xl w-[150px] text-center text-lg font-bold cursor-pointer hover:bg-[#9d4edd] hover:text-black hover:transition hover:duration-300 hover:ease-in-out">
+            Projects
+          </h4>
+        </a>
+        <a href="#SkillsSection">
+          <h4 className="text-white border border-white p-3 rounded-xl w-[150px] text-center text-lg font-bold cursor-pointer hover:bg-[#9d4edd] hover:text-black hover:transition hover:duration-300 hover:ease-in-out">
+            Skills
+          </h4>
+        </a>
+        <a href="#Contact">
+          <h4 className="text-white border border-white p-3 rounded-xl w-[150px] text-center text-lg font-bold cursor-pointer hover:bg-[#9d4edd] hover:text-black hover:transition hover:duration-300 hover:ease-in-out">
+            Contact
+          </h4>
+        </a>
       </div>
     </main>
   );

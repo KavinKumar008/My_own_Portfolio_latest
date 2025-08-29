@@ -3,15 +3,17 @@ import HeroSection from "./HeroSection";
 import ProjectsSection from "./ProjectsSection";
 import SkillsSection from "./SkillsSection";
 import ProfessionalExperience from "./ProfessionalExperience";
+import ContactInfo from "./ContactInfo";
 
 const App = () => {
   return (
     <>
       <NavBar />
       <HeroSection />
-      <ProjectsSection />
       <SkillsSection />
       <ProfessionalExperience />
+      <ProjectsSection />
+      <ContactInfo />
     </>
   );
 };
