@@ -7,17 +7,17 @@ import { CiMail } from "react-icons/ci";
 const HeroSection = () => {
   return (
     <div className="flex flex-col justify-center" id="HeroSection">
-      <div className="flex items-center justify-center mt-10">
+      <div className="flex items-center justify-center xl:mt-10 mt-5">
         <img
           src={myPhoto}
           alt=""
-          className="rounded-full w-[250px] h-[250px]"
+          className="rounded-full w-[250px] h-[250px] cursor-pointer"
         />
       </div>
 
-      <main className="mx-auto w-[80%] h-[300px] text-white rounded-md mt-16 flex flex-col gap-5">
-        <p className="text-center p-5 text-8xl font-bold">
-          I'm <span className="text-8xl text-[#3a86ff]">Kavin Kumar</span>
+      <main className="mx-auto xl:w-[80%] w-full xl:h-[300px] text-white rounded-md xl:mt-16 flex flex-col gap-5">
+        <p className="text-center p-5 xl:text-8xl text-4xl font-bold">
+          I'm <span className="xl:text-8xl text-[#3a86ff]">Kavin Kumar</span>
         </p>
         <p className="text-center font-semibold text-2xl">
           Software Developer <span>{`</>`}</span>

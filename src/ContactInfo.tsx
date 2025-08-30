@@ -1,7 +1,7 @@
 const ContactInfo = () => {
   return (
     <section
-      className="flex items-center justify-center gap-16 bg-[#1b263b] p-5"
+      className="xl:flex items-center justify-center xl:gap-16 bg-[#1b263b] p-5 lg:flex lg:gap-14 md:flex md:gap-14 sm:flex sm:gap-8"
       id="Contact"
     >
       <div className="flex flex-col gap-2">
@@ -16,7 +16,7 @@ const ContactInfo = () => {
         </div>
       </div>
       <div className="flex justify-center items-center">
-        <p className="text-white text-2xl font-bold">
+        <p className="text-white xl:text-2xl lg:text-xl md:text-xl sm:text-[16px] font-bold">
           Made with Love and Javascript🧡
         </p>
       </div>
