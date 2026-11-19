@@ -12,7 +12,7 @@ const ProjectsPage = () => {
           PROJECTS
         </h1>
         <p className="text-zinc-600 dark:text-zinc-400 text-base sm:text-lg max-w-2xl">
-          A collection of full-stack platforms, client-side applications, and developer tools built with React, Node.js, and TypeScript.
+          A collection of freelance platforms, full-stack applications, and developer tools built with React, Next JS, Node.js, and TypeScript.
         </p>
       </div>
 
@@ -45,7 +45,13 @@ const ProjectsPage = () => {
                     {project.tags.map((t) => (
                       <span
                         key={t}
-                        className="text-[11px] font-semibold px-2 py-0.5 rounded-full border border-blue-500/30 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400"
+                        className={`text-[11px] font-semibold px-2 py-0.5 rounded-full border ${
+                          t === "Freelance"
+                            ? "border-emerald-500/40 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400"
+                            : t === "Featured"
+                            ? "border-amber-500/30 bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300"
+                            : "border-blue-500/30 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400"
+                        }`}
                       >
                         {t}
                       </span>
@@ -79,22 +85,24 @@ const ProjectsPage = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 font-semibold text-xs hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 font-semibold text-xs hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all shadow-sm"
                     >
                       <span>Live Site</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   )}
 
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-zinc-300 dark:border-white/10 bg-white dark:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300 font-semibold text-xs hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all"
-                  >
-                    <FaGithub className="w-3.5 h-3.5" />
-                    <span>GitHub</span>
-                  </a>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-zinc-300 dark:border-white/10 bg-white dark:bg-zinc-800/60 text-zinc-700 dark:text-zinc-300 font-semibold text-xs hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all"
+                    >
+                      <FaGithub className="w-3.5 h-3.5" />
+                      <span>GitHub</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

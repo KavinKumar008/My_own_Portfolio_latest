@@ -6,10 +6,12 @@ export interface Project {
   techStack: string[];
   image: string;
   liveUrl?: string;
-  githubUrl: string;
+  githubUrl?: string;
   featured?: boolean;
 }
 
+import attirenestImg from "../assets/attirenest_screenshot.png";
+import billcraftImg from "../assets/billcraft_screenshot.png"
 import ecommerceImg from "../assets/ecommerceapp_image.png";
 import pixabayImg from "../assets/pixabayclone_image.png";
 import todoImg from "../assets/todoappfilter_image.png";
@@ -17,6 +19,29 @@ import weatherImg from "../assets/weatherapp_image.png";
 import employeeImg from "../assets/employeedetails_image.png";
 
 export const projectsData: Project[] = [
+  {
+    id: "attirenest",
+    title: "AttireNest - E-Commerce Fashion Platform",
+    description:
+      "A commercial clothing and apparel e-commerce web application featuring responsive catalog browsing, product filtering, secure customer checkout, and modern storefront styling.",
+    tags: ["Freelance", "Featured", "Full Stack"],
+    techStack: ["Next JS", "JavaScript", "Tailwind CSS", "REST API", "MongoDB"],
+    image: attirenestImg,
+    liveUrl: "https://www.attirenest.in/",
+    githubUrl: "https://github.com/ragunanthan/attirenest_catelog",
+    featured: true,
+  },
+  {
+    id: "billcraft",
+    title: "BillCraft - Enterprise Invoicing & Billing Suite",
+    description:
+      "A cloud-based billing and invoicing platform developed for businesses to generate GST-compliant invoices, manage client profiles, automate tax calculations, and track payment histories.",
+    tags: ["Freelance", "Featured", "Web App"],
+    techStack: ["React", "TypeScript", "Tailwind CSS", "REST API", "Cloud Solutions"],
+    image: billcraftImg,
+    liveUrl: "https://qabillcraft.cloudcraftmen.com/",
+    featured: true,
+  },
   {
     id: "ecommerce-app",
     title: "Fullstack E-Commerce Platform",
@@ -39,7 +64,6 @@ export const projectsData: Project[] = [
     image: pixabayImg,
     liveUrl: "https://elaborate-nougat-0c1ab9.netlify.app/",
     githubUrl: "https://github.com/KavinKumar008/pixabay-clone",
-    featured: true,
   },
   {
     id: "todo-reminder",
