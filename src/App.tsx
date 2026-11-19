@@ -1,20 +1,29 @@
-import NavBar from "./NavBar";
-import HeroSection from "./HeroSection";
-import ProjectsSection from "./ProjectsSection";
-import SkillsSection from "./SkillsSection";
-import ProfessionalExperience from "./ProfessionalExperience";
-import ContactInfo from "./ContactInfo";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
+import Layout from "./components/Layout";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ResumePage from "./pages/ResumePage";
+import ContactPage from "./pages/ContactPage";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const App = () => {
   return (
-    <>
-      <NavBar />
-      <HeroSection />
-      <SkillsSection />
-      <ProfessionalExperience />
-      <ProjectsSection />
-      <ContactInfo />
-    </>
+    <ThemeProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="projects" element={<ProjectsPage />} />
+            <Route path="resume" element={<ResumePage />} />
+            <Route path="contact" element={<ContactPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 };
 
